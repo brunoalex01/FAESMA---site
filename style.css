@@ -6,7 +6,7 @@
             --text-dark: #222;
     
             /* Variáveis para modo escuro */
-            --bg-dark: #1a1a1a;
+            --bg-dark: #4b4b4b;
             --text-light: #f0f0f0;
             --card-dark: #2d2d2d;
             --shadow-dark: rgba(0,0,0,0.3);
@@ -43,6 +43,10 @@
             margin-bottom: 24px;
             color: var(--primary-blue);
         }
+        body.dark-mode .section-title {
+    color: var(--text-light); /* Isso usará a cor clara no modo escuro */
+}
+
         nav {
             margin-top: 16px;
         }
@@ -188,10 +192,10 @@
 
 .dark-mode-btn {
     background: transparent;
-    border: 2px solid var(--accent);
+    border: 1px solid var(--accent);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     position: relative;
     margin-right: 15px;
@@ -226,6 +230,7 @@ body.dark-mode .dark-mode-btn .moon {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 10px;
 }
 
         @media (max-width: 700px) {
