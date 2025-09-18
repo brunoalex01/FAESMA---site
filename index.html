@@ -10,6 +10,10 @@
 <body>
     <header>
         <div class="top-bar">
+            <button id="darkModeToggle" class="dark-mode-btn">
+                <span class="moon">🌙</span>
+                <span class="sun">☀️</span>
+            </button>
             <a href="#" class="area-aluno">Área do Aluno</a>
         </div>
         <nav>
@@ -17,11 +21,11 @@
         </nav>
     </header>
     <div class="container">
-        <h2 class="section-title">Nossos Cursos</h2>
+        <h2 class="section-title">Graduação EAD</h2>
         <div class="card-list" id="card-list">
             <!-- Cards serão carregados aqui -->
         </div>
-        <div class="loading" id="loading" style="display:none;">Carregando mais cursos...</div>
+        <div class="loading" id="loading" style="display:none;">Carregando...</div>
     </div>
     <footer>
         &copy; 2024 FAESMA. Todos os direitos reservados.
@@ -31,10 +35,10 @@
         // Dados simulados dos cursos
         const cursos = [
             { 
-                titulo: "Administração", 
-                desc: "Curso de Administração com foco em gestão moderna.", 
+                titulo: "História - Liscenciatura", 
+                desc: "Curso de História com foco em metodologias ativas.", 
                 img: "",
-                url: "cursos/administracao.html"
+                url: "https://app.faesma.com.br/captacao/public/v2/pre-cadastro"
             },
             { 
                 titulo: "Direito", 
@@ -136,6 +140,26 @@
         document.addEventListener('DOMContentLoaded', () => {
             loadMore();
         });
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Verifica se há preferência salva
+    const darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        // Salva a preferência do usuário
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            localStorage.setItem('darkMode', null);
+        }
+    });
     </script>
 </body>
 </html>

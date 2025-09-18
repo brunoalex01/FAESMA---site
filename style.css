@@ -4,6 +4,12 @@
             --accent: #5ce1e6;
             --bg-light: #f7f7f7;
             --text-dark: #222;
+    
+            /* Variáveis para modo escuro */
+            --bg-dark: #1a1a1a;
+            --text-light: #f0f0f0;
+            --card-dark: #2d2d2d;
+            --shadow-dark: rgba(0,0,0,0.3);
         }
         body {
             margin: 0;
@@ -11,6 +17,11 @@
             background: var(--bg-light);
             color: var(--text-dark);
         }
+        body.dark-mode {
+    background: var(--bg-dark);
+    color: var(--text-light);
+}
+
         header {
             position: relative;
             background: linear-gradient(90deg, rgba(13,1,88,0.9), rgba(0,129,37,0.9)), url('img/fundo-header.jpeg');
@@ -68,6 +79,11 @@
             border-top: 6px solid var(--primary-green);
             transition: box-shadow 0.2s;
         }
+        body.dark-mode .card {
+    background: var(--card-dark);
+    box-shadow: 0 2px 12px var(--shadow-dark);
+}
+
         .card:hover {
             box-shadow: 0 6px 24px rgba(0,129,37,0.12);
             border-top: 6px solid var(--accent);
@@ -91,12 +107,20 @@
             font-size: 1.3rem;
             color: var(--primary-blue);
         }
+        body.dark-mode .card h2 {
+    color: var(--text-light);
+}
+
         .card p {
             font-size: 1rem;
             margin: 0 0 18px 0;
             color: #444;
             text-align: center;
         }
+        body.dark-mode .card p {
+    color: #ccc;
+}
+
         .card button {
             background: var(--accent);
             color: var(--primary-blue);
@@ -123,9 +147,9 @@
             background: var(--primary-blue);
             color: #fff;
             text-align: center;
-            padding: 24px 0 16px 0;
-            margin-top: 48px;
-            font-size: 1rem;
+            padding: 20px 0 15px 0;
+            margin-top: 35px;
+            font-size: 0.5rem;
         }
         .top-bar {
     position: absolute;
@@ -160,6 +184,48 @@
 
 .saiba-mais button {
     cursor: pointer;
+}
+
+.dark-mode-btn {
+    background: transparent;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    transform: scale(1.1);
+}
+
+.dark-mode-btn .sun {
+    display: none;
+}
+
+.dark-mode-btn .moon {
+    display: block;
+}
+
+body.dark-mode .dark-mode-btn .sun {
+    display: block;
+}
+
+body.dark-mode .dark-mode-btn .moon {
+    display: none;
+}
+
+/* Ajuste do top-bar para acomodar o botão */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
         @media (max-width: 700px) {
