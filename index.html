@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>FAESMA - Faculdade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="#" class="area-aluno">Área do Aluno</a>
+        </div>
+        <h1><img src="img/BANNER FAESMA FINAL PROD.png" height="40%" width="40%"></h1>
+        <nav>    
+            <a href="#">Cursos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card-list" id="card-list">
+            <!-- Cards serão carregados aqui -->
+        </div>
+        <div class="loading" id="loading" style="display:none;">Carregando mais cursos...</div>
+    </div>
+    <footer>
+        &copy; 2024 FAESMA. Todos os direitos reservados.
+        <img src="img/FAESMA SEM FUNDO LETRA BRANCA.png" alt="FAESMA logo with a shield, laurel wreath, and open book, large FAESMA text and Faculdade Alcance de Ensino Superior do Maranhão in white on a black background, formal and academic tone" style="height:40px; vertical-align:middle; margin-left:20px;">
+    </footer>
+    <script>
+        // Dados simulados dos cursos
+        const cursos = [
+            { titulo: "Administração", desc: "Curso de Administração com foco em gestão moderna.", img: "" },
+            { titulo: "Direito", desc: "Formação completa em Direito, com professores renomados.", img: "" },
+            { titulo: "Pedagogia", desc: "Pedagogia inovadora para formar grandes educadores.", img: "" },
+            { titulo: "Engenharia de Produção", desc: "Curso voltado para a indústria 4.0.", img: "" },
+            { titulo: "Psicologia", desc: "Psicologia com abordagem humanista e prática.", img: "" },
+            { titulo: "Ciências Contábeis", desc: "Contabilidade para o mercado atual.", img: "" },
+            { titulo: "Educação Física", desc: "Formação em Educação Física com infraestrutura moderna.", img: "" },
+            { titulo: "Enfermagem", desc: "Curso de Enfermagem com laboratórios completos.", img: "" },
+            { titulo: "Análise e Desenvolvimento de Sistemas", desc: "Tecnologia e inovação em TI.", img: "" },
+            { titulo: "Gestão de RH", desc: "Gestão de pessoas para empresas do futuro.", img: "" },
+            // Adicione mais cursos conforme necessário
+        ];
+
+        let loaded = 0;
+        const perLoad = 4;
+
+        function createCard(curso) {
+            return `
+                <div class="card">
+                    <div class="img-placeholder">
+                        Espaço para imagem
+                    </div>
+                    <h2>${curso.titulo}</h2>
+                    <p>${curso.desc}</p>
+                    <button>Saiba mais</button>
+                </div>
+            `;
+        }
+
+        function loadMore() {
+            const list = document.getElementById('card-list');
+            const loading = document.getElementById('loading');
+            loading.style.display = 'block';
+            setTimeout(() => {
+                for (let i = loaded; i < loaded + perLoad && i < cursos.length; i++) {
+                    list.insertAdjacentHTML('beforeend', createCard(cursos[i]));
+                }
+                loaded += perLoad;
+                loading.style.display = 'none';
+            }, 700);
+        }
+
+        // Infinite scroll
+        window.addEventListener('scroll', () => {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
+                if (loaded < cursos.length) {
+                    loadMore();
+                }
+            }
+        });
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            loadMore();
+        });
+    </script>
+</body>
+</html>
