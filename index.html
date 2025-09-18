@@ -12,11 +12,8 @@
         <div class="top-bar">
             <a href="#" class="area-aluno">Área do Aluno</a>
         </div>
-        <h1><img src="img/BANNER FAESMA FINAL PROD.png" height="40%" width="40%"></h1>
-        <nav>    
-            <a href="#">Cursos</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
+        <nav>
+            <img src="img/FAESMA COLORIDA SEM FUNDO BRANCO 2.png" height="20%" width="40%">    
         </nav>
     </header>
     <div class="container">
@@ -33,17 +30,66 @@
     <script>
         // Dados simulados dos cursos
         const cursos = [
-            { titulo: "Administração", desc: "Curso de Administração com foco em gestão moderna.", img: "" },
-            { titulo: "Direito", desc: "Formação completa em Direito, com professores renomados.", img: "" },
-            { titulo: "Pedagogia", desc: "Pedagogia inovadora para formar grandes educadores.", img: "" },
-            { titulo: "Engenharia de Produção", desc: "Curso voltado para a indústria 4.0.", img: "" },
-            { titulo: "Psicologia", desc: "Psicologia com abordagem humanista e prática.", img: "" },
-            { titulo: "Ciências Contábeis", desc: "Contabilidade para o mercado atual.", img: "" },
-            { titulo: "Educação Física", desc: "Formação em Educação Física com infraestrutura moderna.", img: "" },
-            { titulo: "Enfermagem", desc: "Curso de Enfermagem com laboratórios completos.", img: "" },
-            { titulo: "Análise e Desenvolvimento de Sistemas", desc: "Tecnologia e inovação em TI.", img: "" },
-            { titulo: "Gestão de RH", desc: "Gestão de pessoas para empresas do futuro.", img: "" },
-            // Adicione mais cursos conforme necessário
+            { 
+                titulo: "Administração", 
+                desc: "Curso de Administração com foco em gestão moderna.", 
+                img: "",
+                url: "cursos/administracao.html"
+            },
+            { 
+                titulo: "Direito", 
+                desc: "Formação completa em Direito, com professores renomados.", 
+                img: "",
+                url: "cursos/direito.html"
+            },
+            { 
+                titulo: "Pedagogia", 
+                desc: "Pedagogia inovadora para formar grandes educadores.", 
+                img: "",
+                url: "cursos/pedagogia.html"
+            },
+            { 
+                titulo: "Engenharia de Produção", 
+                desc: "Curso voltado para a indústria 4.0.", 
+                img: "",
+                url: "cursos/engenharia-producao.html"
+            },
+            { 
+                titulo: "Psicologia", 
+                desc: "Psicologia com abordagem humanista e prática.", 
+                img: "",
+                url: "cursos/psicologia.html"
+            },
+            { 
+                titulo: "Ciências Contábeis", 
+                desc: "Contabilidade para o mercado atual.", 
+                img: "",
+                url: "cursos/ciencias-contabeis.html"
+            },
+            { 
+                titulo: "Educação Física", 
+                desc: "Formação em Educação Física com infraestrutura moderna.", 
+                img: "",
+                url: "cursos/educacao-fisica.html"
+            },
+            { 
+                titulo: "Enfermagem", 
+                desc: "Curso de Enfermagem com laboratórios completos.", 
+                img: "",
+                url: "cursos/enfermagem.html"
+            },
+            { 
+                titulo: "Análise e Desenvolvimento de Sistemas", 
+                desc: "Tecnologia e inovação em TI.", 
+                img: "",
+                url: "cursos/ads.html"
+            },
+            { 
+                titulo: "Gestão de RH", 
+                desc: "Gestão de pessoas para empresas do futuro.", 
+                img: "",
+                url: "cursos/gestao-rh.html"
+            }
         ];
 
         let loaded = 0;
@@ -57,7 +103,9 @@
                     </div>
                     <h2>${curso.titulo}</h2>
                     <p>${curso.desc}</p>
-                    <button>Saiba mais</button>
+                    <a href="${curso.url}" class="saiba-mais">
+                        <button>Saiba mais</button>
+                    </a>
                 </div>
             `;
         }

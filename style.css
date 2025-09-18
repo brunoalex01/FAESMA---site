@@ -153,6 +153,15 @@
     box-shadow: 0 4px 12px rgba(92,225,230,0.3);
 }
 
+.saiba-mais {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.saiba-mais button {
+    cursor: pointer;
+}
+
         @media (max-width: 700px) {
             .card-list {
                 flex-direction: column;
