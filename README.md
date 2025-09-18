@@ -1,2 +1,2 @@
-# FAESMA---site
-Para desenvolvimento do site da FAESMA
+# FAESMA -- Faculdade Alcance de Ensino Superior do Maranhão
+Para desenvolvimento do site da faculdade FAESMA.
