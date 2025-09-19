@@ -42,6 +42,10 @@
             text-align: center;
             margin-bottom: 24px;
             color: var(--primary-blue);
+            margin-top: 50px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-green);
         }
         body.dark-mode .section-title {
     color: var(--text-light); /* Isso usará a cor clara no modo escuro */
