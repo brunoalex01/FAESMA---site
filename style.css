@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
             --primary-blue: #0d0158;
             --primary-green: #008125;
@@ -13,7 +15,7 @@
         }
         body {
             margin: 0;
-            font-family: 'Poppins', Arial, sans-serif;
+            font-family: 'Poppins', sans-serif; /* Modificando a fonte aqui */
             background: var(--bg-light);
             color: var(--text-dark);
         }
@@ -28,7 +30,7 @@
             background-size: cover;
             background-position: center;
             color: #fff;
-            padding: 32px 0 24px 0;
+            padding: 35px 0 25px 0;
             text-align: center;
         }
         header h1 {
@@ -79,11 +81,12 @@
             background: #fff;
             border-radius: 12px;
             box-shadow: 0 2px 12px rgba(13,1,88,0.08);
-            width: 320px;
+            width: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 24px 18px 18px 18px;
+            text-align: center;
+            padding: 25px 20px 20px 20px;
             border-top: 6px solid var(--primary-green);
             transition: box-shadow 0.2s;
         }
@@ -169,13 +172,13 @@
 .area-aluno {
     background-color: var(--accent);
     color: var(--primary-blue);
-    padding: 8px 20px;
-    border-radius: 6px;
+    padding: 10px 10px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 8px rgba(92,225,230,0.2);
+    box-shadow: 0 4px 8px rgba(92,225,230,0.2);
 }
 
 .area-aluno:hover {
