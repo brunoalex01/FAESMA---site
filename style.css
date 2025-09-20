@@ -173,18 +173,34 @@
 .area-aluno {
     background-color: var(--accent);
     color: var(--primary-blue);
-    padding: 10px 10px;
+    padding: 10px 10px 10px 35px;
     border-radius: 10px;
     text-decoration: none;
+    font-family: poppins, sans-serif;
     font-weight: bold;
     font-size: 0.8rem;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
     box-shadow: 0 4px 8px rgba(92,225,230,0.2);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.area-aluno::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url('img/favicon.ico');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
 }
 
 .area-aluno:hover {
     background-color: #fff;
-    color: var(--primary-blue);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(92,225,230,0.3);
 }
