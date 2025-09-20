@@ -15,7 +15,7 @@
         }
         body {
             margin: 0;
-            font-family: 'Poppins', sans-serif; /* Modificando a fonte aqui */
+            font-family: 'Poppins', sans-serif;
             background: var(--bg-light);
             color: var(--text-dark);
         }
@@ -50,7 +50,7 @@
     border-bottom: 2px solid var(--primary-green);
         }
         body.dark-mode .section-title {
-    color: var(--text-light); /* Isso usará a cor clara no modo escuro */
+    color: var(--text-light);
 }
 
         nav {

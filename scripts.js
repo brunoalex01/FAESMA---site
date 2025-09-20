@@ -1,4 +1,4 @@
-    // Dados simulados dos cursos
+    // Dados dos cursos EAD
         const cursos = {
     // Cursos de Graduação EAD
     graduacao: [
